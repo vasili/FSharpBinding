@@ -6,7 +6,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="MonoDevelop.FSharp/FSharpBindingCompilerManager.cs" ctype="Workbench">
     <Files>
       <File FileName="MonoDevelop.FSharp.Project/FSharpCompilerParameters.cs" Line="1" Column="1" />
-      <File FileName="MonoDevelop.FSharp/FSharpBindingCompilerManager.cs" Line="387" Column="41" />
+      <File FileName="MonoDevelop.FSharp/FSharpBindingCompilerManager.cs" Line="322" Column="1" />
       <File FileName="MonoDevelop.FSharp/FSharpLanguageBinding.cs" Line="1" Column="1" />
       <File FileName="MonoDevelop.FSharp/FSharpEnhancedCodeProvider.cs" Line="1" Column="1" />
       <File FileName="MonoDevelop.FSharp.Project/FSharpProjectParameters.cs" Line="1" Column="1" />

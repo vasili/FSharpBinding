@@ -1,8 +1,8 @@
 //
-// CSharpCompilerParameters.cs
+// FSharpCompilerParameters.cs
 //
 // Author:
-//   Mike Krüger <mkrueger@novell.com>
+//   Vasili I Galchin <vigalchin@gmail.com> but heavily based on CSharp implementation by Mike Krüger <mkrueger@novell.com>
 //
 // Copyright (C) 2009 Novell, Inc (http://www.novell.com)
 //

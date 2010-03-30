@@ -2,7 +2,7 @@
 // ProjectParameters.cs
 //  
 // Author:
-//       Lluis Sanchez Gual <lluis@novell.com>
+//       Vasili I Galchin <vigalchin@gmail.com> but heavily based on CSharp implementatation by Lluis Sanchez Gual <lluis@novell.com>
 // 
 // Copyright (c) 2009 Novell, Inc (http://www.novell.com)
 // 

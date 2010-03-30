@@ -170,5 +170,155 @@
     <None Include="FSharpBinding.pidb.SAV">
       <Visible>False</Visible>
     </None>
+    <None Include=".git\HEAD">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\config">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\description">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\index">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\applypatch-msg.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\commit-msg.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\post-commit.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\post-receive.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\post-update.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\pre-applypatch.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\pre-commit.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\pre-rebase.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\prepare-commit-msg.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\hooks\update.sample">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\info\exclude">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\0c\1e6ce80a6ed7edfa5b86b6739be86b0aa2c973">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\14\ddabad44d1cd61c6702c430aa2482be999c07a">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\22\82b7f0f5ac9ea7838532b939e867341b8ffad5">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\30\d802532d71ca07f37263802a5e59e371b34cc8">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\48\2277629ab9213311f6b126d418b2cdad2170f3">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\4a\595a14b123192605ade10772d475a263e91154">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\4a\78bf0a9320775f152b17787cd15638a11aeb62">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\56\b9d445aa39bdf4673d2e37270e856abd16ba7a">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\5d\4be1d2bed51fbe540a9d14efd9f938b8d90f21">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\66\f8265941a6558358253f0c6cea702ca43b57f6">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\6b\894983c633719b1073bd66ad106e35eb5f21df">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\71\8f11c3617810af731ead2c346384ed5426d291">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\75\9fbba553da393d804b33565fae6f8cf411751d">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\77\33495c26d55dc6b72982d92b8f361504efa676">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\7a\92ab2c4347cab933727813c7df1ede8e9b0e8e">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\7b\3105e200dd2369283a9e44a3e15ffab2ded20c">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\86\15ca7a1b960a4aa8bb4ec6eecea5d0b331bfda">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\8a\b84661ee7f90dcb4915faf2032d484a5d17eac">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\96\cb525e74a18577f1d52fad8797ce6e309d3657">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\98\00f08753a8f481ef3905e51fc7f94f6805b3aa">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\a1\8390919b64c1fa11ac0aafa880e17f26e355c6">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\a6\b2b076c5c588a896da634835e1ad1f0ad687d7">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\b0\f24917aef3df75fda860c923039f8aa2027e29">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\b2\e5f9fe1b46bb3f73e86c88ca3a47542acc5065">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\b5\b13f36702da91eb8545eb0e044d665ab209b5e">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\b8\f2b43945c991c2e31e1ac12d11625ec339deb5">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\bd\46ea63e36a7896aa8cfefe133ef3840eaf1a16">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\bf\440e8ab0c9300d830128538a0d1d96f5e5b0c8">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\ca\c3852bb1432b202e86b09d06ae81a855bf1a47">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\d5\9b3b2b0c1475c68e44341e39a50f5544bde47f">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\d9\b7ad5c1b80844602d9d57a9e711a4ea924fd09">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\dc\665451ee221d2bad34e8df57f906199b086afd">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\de\a125c07b2202ec6c814871044b746ee663b01b">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\df\c09d53f52c265cf766ea5d6434d980594967dd">
+      <Visible>False</Visible>
+    </None>
+    <None Include=".git\objects\ee\45f46bd28586e4f793c0d9966ff6551e382037">
+      <Visible>False</Visible>
+    </None>
   </ItemGroup>
 </Project>

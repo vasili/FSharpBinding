@@ -2,7 +2,7 @@
 // FSharpBindingCompilerManager.cs
 //  
 // Author:
-//       Mike Krüger <mkrueger@novell.com>
+//       Vasili I Galchin <vigalchin@gmail.com> but heavily based on CSharp work by Mike Krüger <mkrueger@novell.com>
 // 
 // Copyright (c) 2009 Novell, Inc (http://www.novell.com)
 // 

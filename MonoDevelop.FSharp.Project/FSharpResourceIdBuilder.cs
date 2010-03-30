@@ -2,7 +2,7 @@
 // FSharpResourceIdBuilder.cs
 //
 // Author:
-//   Ankit Jain <jankit@novell.com>
+//   Vasili I Galchin <vigalchin@gmail.com> but heavily based on CSharp implementation by Ankit Jain <jankit@novell.com>
 //
 // Copyright (C) 2006 Novell, Inc (http://www.novell.com)
 //

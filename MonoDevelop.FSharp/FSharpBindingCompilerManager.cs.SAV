@@ -58,6 +58,7 @@ namespace MonoDevelop.FSharp
 			FSharpProjectParameters projectParameters = (FSharpProjectParameters)configuration.ProjectParameters ?? new FSharpProjectParameters ();
 			
 			string outputName       = configuration.CompiledOutputName;
+			string responseFileName = Path.GetTempFileName();
 			
 
 			TargetRuntime runtime = MonoDevelop.Core.Runtime.SystemAssemblyService.DefaultRuntime;
@@ -256,6 +257,10 @@ namespace MonoDevelop.FSharp
 			string error  = "";
 			
 
+			// Write the command line parms to responseFileName
+			File.WriteAllText (responseFileName, sb.ToString ());
+			
+
 			string compilerName;
 			try {
 				compilerName = GetCompilerName (runtime, configuration.TargetFramework);
@@ -285,6 +290,11 @@ namespace MonoDevelop.FSharp
 
 			
 			Dictionary<string,string> envVars = runtime.GetToolsEnvironmentVariables (project.TargetFramework);
+			// FIXME!!! WNH  string cargs = "/noconfig @\"" + responseFileName + "\"";
+			string cargs = responseFileName;
+LoggingService.LogInfo("************** " + cargs); // WNH TEMP
+
+// WNH			int exitCode = DoCompilation (compilerName, cargs, workingDir, envVars, gacRoots, ref output, ref error);
 			int exitCode = DoCompilation (compilerName, sb.ToString(), workingDir, envVars, gacRoots, ref output, ref error);
 			
 
@@ -299,7 +309,10 @@ namespace MonoDevelop.FSharp
 				} catch (IOException) {
 				}
 				result.AddError ("The compiler appears to have crashed. Check the build output pad for details.");
+				LoggingService.LogError ("F# compiler crashed. Response file '{0}', stdout file '{1}', stderr file '{2}'",
+				                         responseFileName, output, error);
 			} else {
+				FileService.DeleteFile (responseFileName);
 				FileService.DeleteFile (output);
 				FileService.DeleteFile (error);
 			}

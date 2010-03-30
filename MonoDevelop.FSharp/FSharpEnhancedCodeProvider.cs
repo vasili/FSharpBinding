@@ -1,8 +1,9 @@
 //
-// CSharpEnhancedCodeProvider.cs
+// FSharpEnhancedCodeProvider.cs
 //
 // Authors:
-//   Michael Hutchinson <m.j.hutchinson@gmail.com>
+//   Vasili I Galchin <vigalchin@gmail.com> but heavily based on CSharp work by Michael Hutchinson 
+//                                                        <m.j.hutchinson@gmail.com>
 //
 // Copyright (C) 2006 Michael Hutchinson
 //
