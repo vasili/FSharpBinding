@@ -1,0 +1,100 @@
+<Addin id          = "FSharpBinding"
+       namespace   = "MonoDevelop"
+       name        = "FSharp Language Binding"
+       author      = "William Halchin"
+       copyright   = "MIT X11"
+       url         = "http://www.monodevelop.com/"
+       description = "FSharp Language Binding"
+	   category    = "Language bindings"
+       version     = "2.2">
+	
+	<Dependencies>
+		<Addin id="Core" version="2.2"/>
+		<Addin id="Core.Gui" version="2.2"/>
+		<Addin id="Projects" version="2.2"/>
+		<Addin id="Projects.Gui" version="2.2"/>
+		<Addin id="Ide" version="2.2"/>
+		<Addin id="SourceEditor2" version="2.2"/>
+		<Addin id="Refactoring" version="2.2"/>
+		<Addin id="AspNet" version="2.2"/>
+	</Dependencies>
+
+
+        <Extension path = "/MonoDevelop/ProjectModel/MSBuildItemTypes">
+                <DotNetProject
+                        language="F#"
+                        extension="fsproj"
+                        guid="{F2A71F9B-5D33-465A-A702-920D77279786}"
+                        import="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets"
+                        resourceHandler="MonoDevelop.FSharp.Project.FSharpResourceIdBuilder"
+                        />
+        </Extension>
+
+
+        <Extension path = "/MonoDevelop/Core/StockIcons">
+                <StockIcon stockid = "md-fsharp-file" resource = "F#.FileIcon" />
+                <StockIcon stockid = "md-fsharp-project" resource = "fsharp-project-16.png" />
+        </Extension>
+
+
+        <Extension path = "/MonoDevelop/ProjectModel/LanguageBindings">
+                <LanguageBinding id    = "FSharp"
+                                 supportedextensions = ".fs"
+                                 class = "MonoDevelop.FSharp.FSharpLanguageBinding" />
+        </Extension>
+
+
+       <Extension path = "/MonoDevelop/ProjectModel/SerializableClasses">
+                <DataType class = "MonoDevelop.FSharp.Project.FSharpCompilerParameters" />
+                <DataType class = "MonoDevelop.FSharp.Project.FSharpProjectParameters" />
+        </Extension>
+
+
+        <Extension path = "/MonoDevelop/Core/MimeTypes">
+                <MimeType id="text/x-fsharp" _description="F# source code" icon="md-fsharp-file" isText="true">
+                        <File pattern="*.fs" />
+                </MimeType>
+        </Extension>
+
+
+	<Extension path = "/MonoDevelop/Ide/FileTemplates">
+		<FileTemplate id = "FSharpEmptyFile" resource = "FSharpEmptyFile.xft.xml"/>
+		<FileTemplate id = "FSharpAssemblyInfo" resource = "AssemblyInfo.xft.xml"/>
+	</Extension>
+
+
+	<Extension path = "/MonoDevelop/Ide/ProjectTemplates">
+		<ProjectTemplate id = "FSharpConsoleProject" resource = "FSharpConsoleProject.xpt.xml"/>
+		<ProjectTemplate id = "FSharpEmptyProject" resource = "FSharpEmptyProject.xpt.xml"/>
+		<ProjectTemplate id = "FSharpGladeSharp2Project" resource = "GladeSharp2Project.xpt.xml"/>
+		<ProjectTemplate id = "FSharpGnomeSharp2Project" resource = "GnomeSharp2Project.xpt.xml"/>
+		<ProjectTemplate id = "FSharpGtkSharp2Project" resource = "GtkSharp2Project.xpt.xml"/>
+		<ProjectTemplate id = "FSharpLibraryProject" resource = "FSharpLibraryProject.xpt.xml"/>
+	</Extension>
+	
+
+        <Extension path = "/MonoDevelop/Ide/FileFilters">
+                <FileFilter id = "FSharp"
+                            insertbefore="AllFiles"
+                            _label = "FSharp Files"
+                            extensions = "*.fs"/>
+                <FileFilter id = "Assemblies"
+                            insertbefore="AllFiles"
+                            _label = "Assemblies"
+                            extensions = "*.exe,*.dll"/>
+                <FileFilter id = "Html"
+                            insertbefore="AllFiles"
+                            _label = "Web Files"
+                            extensions = "*.htm,*.html,*.aspx,*.ascx,*.asp"/>
+                <FileFilter id = "Xml"
+                            insertbefore="AllFiles"
+                            _label = "Xml Files"
+                            extensions = "*.xml"/>
+                <FileFilter id = "Resources"
+                            insertbefore="AllFiles"
+                            _label = "Resource Files"
+                            extensions = "*.resources,*.resx"/>
+        </Extension>
+
+
+</Addin>

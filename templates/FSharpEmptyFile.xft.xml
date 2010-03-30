@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<Template Originator="Mike Krueger" Language="F#" Created="3/09/2001" LastModified="3/09/2001">
+	
+	<TemplateConfiguration>
+		<_Name>Empty File</_Name>
+		<Icon>md-text-file-icon</Icon>
+		<_Category>General</_Category>
+		<LanguageName>F#</LanguageName>
+		<_Description>Creates an empty F# file.</_Description>
+	</TemplateConfiguration>
+	
+	<TemplateFiles>
+		<File DefaultExtension=".fs" DefaultName="EmptyCSharpfile" AddStandardHeader="True">
+		</File>
+	</TemplateFiles>
+	
+	<FileOptions/>
+	
+</Template>

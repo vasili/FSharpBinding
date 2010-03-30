@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B6FE87F-EB90-4A5D-8F64-F56BE3A9D836}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FSharpBinding</RootNamespace>
+    <AssemblyName>FSharpBinding</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <newfilesearch>OnLoad</newfilesearch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\monodevelop\main\build\AddIns\BackendBindings</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\monodevelop\main\build\AddIns\BackendBindings</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="MonoDevelop.Projects.Formats.MSBuild, Version=1.0.3576.14156, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Projects.Formats.MSBuild.dll</HintPath>
+    </Reference>
+    <Reference Include="gtk-dotnet, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <Reference Include="gtksourceview2-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtksourceview2-sharp</Package>
+    </Reference>
+    <Reference Include="MonoDevelop.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Projects, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Projects.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Components, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Core.Gui, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Core.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Ide, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Ide.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoDevelop.Projects.Gui, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Projects.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="NRefactory, Version=2.1.1.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MonoDevelop.FSharp\FSharpLanguageBinding.cs" />
+    <Compile Include="MonoDevelop.FSharp\FSharpBindingCompilerManager.cs" />
+    <Compile Include="MonoDevelop.FSharp\FSharpEnhancedCodeProvider.cs" />
+    <Compile Include="MonoDevelop.FSharp.Project\FSharpCompilerParameters.cs" />
+    <Compile Include="MonoDevelop.FSharp.Project\FSharpProjectParameters.cs" />
+    <Compile Include="MonoDevelop.FSharp.Project\FSharpResourceIdBuilder.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="icons\" />
+    <Folder Include="templates\" />
+    <Folder Include="MonoDevelop.FSharp.Project\" />
+    <Folder Include="MonoDevelop.FSharp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="icons\F#.FileIcon">
+      <LogicalName>F#.FileIcon</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\F#.ProjectIcon">
+      <LogicalName>F#.ProjectIcon</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\F#S.FileIcon">
+      <LogicalName>F#S.FileIcon</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\fsharp-file-16.png">
+      <LogicalName>fsharp-file-16.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\fsharp-project-16.png">
+      <LogicalName>fsharp-project-16.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\fsharp-project-32.png">
+      <LogicalName>fsharp-project-32.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\fsharp-project-console-32.png">
+      <LogicalName>fsharp-project-console-32.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\fsharp-project-library-32.png">
+      <LogicalName>fsharp-project-library-32.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icons\fsharp-signature-16.png">
+      <LogicalName>fsharp-signature-16.png</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\AssemblyInfo.xft.xml">
+      <LogicalName>AssemblyInfo.xft.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\FSharpEmptyFile.xft.xml">
+      <LogicalName>FSharpEmptyFile.xft.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\FSharpEmptyProject.xpt.xml">
+      <LogicalName>FSharpEmptyProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\FSharpConsoleProject.xpt.xml">
+      <LogicalName>FSharpConsoleProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\FSharpLibraryProject.xpt.xml">
+      <LogicalName>FSharpLibraryProject.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\GtkSharp2Project.xpt.xml">
+      <LogicalName>GtkSharp2Project.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="templates\GladeSharp2Project.xpt.xml">
+      <LogicalName>GladeSharp2Project.xpt.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSharpBinding.addin.xml">
+      <LogicalName>FSharpBinding.addin.xml</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="md1format.xml">
+      <LogicalName>md1format.xml</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FSharpBinding.csproj.SAV">
+      <Visible>False</Visible>
+    </None>
+    <None Include="MonoDevelop.FSharp.Project\CSharpResourceIdBuilder.cs.ORIG">
+      <Visible>False</Visible>
+    </None>
+    <None Include="MonoDevelop.FSharp.Project\CodeGenerationPanel.cs.ORIG">
+      <Visible>False</Visible>
+    </None>
+    <None Include="MonoDevelop.FSharp.Project\CompilerOptionsPanelWidget.cs.ORIG">
+      <Visible>False</Visible>
+    </None>
+    <None Include="templates\GnomeSharp2Project.xpt.xml">
+      <Visible>False</Visible>
+    </None>
+    <None Include="FSharpBinding.fsproj">
+      <Visible>False</Visible>
+    </None>
+    <None Include="FSharpBinding.sln.SAV">
+      <Visible>False</Visible>
+    </None>
+    <None Include="FSharpBinding.userprefs">
+      <Visible>False</Visible>
+    </None>
+    <None Include="MonoFSharpPolicy.xml">
+      <Visible>False</Visible>
+    </None>
+    <None Include="FSharpBinding.pidb.SAV">
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+</Project>
