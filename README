@@ -1,6 +1,6 @@
 
-This is an early version of an FSharp binding for MonoDevelop. This version is able to create, build and execute console projects. Some pre-existing F# projects have been built
-and executed.
+This is an early version of an FSharp binding for MonoDevelop. This version is able to create, build and execute console projects. Some pre-existing F# projects
+have been built also and executed.
 
 
 Vasili I Galchin <vigalchin@gmail.com>
