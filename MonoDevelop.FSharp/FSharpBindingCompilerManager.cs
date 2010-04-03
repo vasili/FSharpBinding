@@ -126,21 +126,6 @@ namespace MonoDevelop.FSharp
 				sb.AppendLine ("-g");
 			}
 			
-			switch (compilerParameters.LangVersion) {
-			case LangVersion.Default:
-				break;
-			case LangVersion.ISO_1:
-				sb.AppendLine ("/langversion:ISO-1");
-				break;
-			case LangVersion.ISO_2:
-				sb.AppendLine ("/langversion:ISO-2");
-				break;
-			default:
-				string message = "Invalid LangVersion enum value '" + compilerParameters.LangVersion.ToString () + "'";
-				monitor.ReportError (message, null);
-				LoggingService.LogError (message);
-				return null;
-			}
 			
 			// mcs default is + but others might not be   <<<<< what about FSC default??? WNH
 			if (compilerParameters.Optimize)
@@ -284,6 +269,7 @@ namespace MonoDevelop.FSharp
 			LoggingService.LogInfo (compilerName + " " + sb.ToString ());
 
 			
+			// Compile!
 			Dictionary<string,string> envVars = runtime.GetToolsEnvironmentVariables (project.TargetFramework);
 			int exitCode = DoCompilation (compilerName, sb.ToString(), workingDir, envVars, gacRoots, ref output, ref error);
 			
@@ -292,7 +278,7 @@ namespace MonoDevelop.FSharp
 			if (result.CompilerOutput.Trim ().Length != 0)
 				monitor.Log.WriteLine (result.CompilerOutput);
 			
-			//if compiler crashes, output entire error string
+			// If compiler crashes, output entire error string
 			if (result.ErrorCount == 0 && exitCode != 0) {
 				try {
 					monitor.Log.Write (File.ReadAllText (error));
@@ -304,7 +290,6 @@ namespace MonoDevelop.FSharp
 				FileService.DeleteFile (error);
 			}
 
-LoggingService.LogInfo("Leaving Compile!!!!"); // WNH TEMP
 
 			return result;
 		}
@@ -404,12 +389,9 @@ LoggingService.LogInfo("Leaving Compile!!!!"); // WNH TEMP
 			pinfo.RedirectStandardOutput = true;
 			pinfo.RedirectStandardError = true;
 			
-LoggingService.LogInfo("KICK OFF FSC!!");  // WNH
 
 			MonoDevelop.Core.Execution.ProcessWrapper pw = Runtime.ProcessService.StartProcess (pinfo, outwr, errwr, null);
-LoggingService.LogInfo("Kicked off!");  // WNH
 			pw.WaitForOutput();
-LoggingService.LogInfo("after wait!");  // WNH
 			int exitCode = pw.ExitCode;
 			outwr.Close();
 			errwr.Close();
