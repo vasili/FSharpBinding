@@ -83,11 +83,11 @@ namespace MonoDevelop.FSharp
 							monitor.ReportWarning (msg);
 							continue;
 						}
-//						string referencedName = pkg.IsCorePackage ? Path.GetFileName (fileName) : fileName;
-// FIXME!!! WNH						if (!alreadyAddedReference.Contains (referencedName)) {
-//						alreadyAddedReference.Add (referencedName);
-//							AppendQuoted (sb, "/r:", referencedName);
-//						}
+						string referencedName = pkg.IsCorePackage ? Path.GetFileName (fileName) : fileName;
+						if (!alreadyAddedReference.Contains (referencedName)) {
+						alreadyAddedReference.Add (referencedName);
+							AppendQuoted (sb, "--reference:", referencedName);
+						}
 						
 						if (pkg.GacRoot != null && !gacRoots.Contains (pkg.GacRoot))
 							gacRoots.Add (pkg.GacRoot);
@@ -100,13 +100,13 @@ namespace MonoDevelop.FSharp
 									if (alreadyAddedReference.Contains (assembly.Location))
 										continue;
 									alreadyAddedReference.Add (assembly.Location);
-									AppendQuoted (sb, "/r:", assembly.Location);
+									AppendQuoted (sb, "--reference:", assembly.Location);
 								}
 							}
 						}
 						break;
 					default://
-						AppendQuoted (sb, "/r:", fileName);
+						AppendQuoted (sb, "--reference:", fileName);
 						break;
 					}
 				}
@@ -217,7 +217,7 @@ namespace MonoDevelop.FSharp
 						string fname = finfo.Name;
 						if (string.Compare (Path.GetExtension (fname), ".resx", true) == 0)
 							fname = Path.ChangeExtension (fname, ".resources");
-						sb.Append ('"');sb.Append ("/res:");
+						sb.Append ('"');sb.Append ("--resource:");
 						sb.Append (fname);sb.Append (',');sb.Append (finfo.ResourceId);
 						sb.Append ('"');sb.AppendLine ();
 						break;
@@ -226,7 +226,7 @@ namespace MonoDevelop.FSharp
 				}
 			}
 			if (compilerParameters.GenerateXmlDocumentation) 
-				AppendQuoted (sb, "-doc:", Path.ChangeExtension (outputName, ".xml"));  // WNH ??
+				AppendQuoted (sb, "--doc:", Path.ChangeExtension (outputName, ".xml"));  
 			
 			if (!string.IsNullOrEmpty (compilerParameters.AdditionalArguments)) 
 				sb.AppendLine (compilerParameters.AdditionalArguments);
