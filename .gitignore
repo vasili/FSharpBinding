@@ -27,7 +27,7 @@
  _ReSharper*/
  [Tt]est[Rr]esult*
  *.scc
- *.gitignore
+ .gitignore
  *.SAV
  *.ORIG
  *.*.swp 
