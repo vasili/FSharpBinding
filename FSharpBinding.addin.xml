@@ -97,4 +97,22 @@
         </Extension>
 
 
+       <Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/General">
+                <Condition id="ActiveLanguage" value="F#">
+                        <Panel id = "FSharpCompilerOptionsPanel"
+                                     _label = "F#"
+                                     class = "MonoDevelop.FSharp.Project.CompilerOptionsPanel"/>
+                </Condition>
+        </Extension>
+
+        <Extension path = "/MonoDevelop/ProjectModel/Gui/ItemOptionPanels/Build/Compiler">
+                <Condition id="ActiveLanguage" value="F#">
+                        <Panel id = "FSharpCodeGenerationPanel"
+                                     _label = "Compiler"
+                                     class = "MonoDevelop.FSharp.Project.CodeGenerationPanel"/>
+                </Condition>
+        </Extension>
+
+
+
 </Addin>

@@ -183,15 +183,6 @@ namespace MonoDevelop.FSharp
 
 			CompileTarget ctarget = configuration.CompileTarget;
 			
-			if (!string.IsNullOrEmpty (projectParameters.MainClass)) {
-				sb.AppendLine ("/main:" + projectParameters.MainClass);
-				// mcs does not allow providing a Main class when compiling a dll
-				// As a workaround, we compile as WinExe (although the output will still
-				// have a .dll extension).
-				if (ctarget == CompileTarget.Library)
-					ctarget = CompileTarget.WinExe;
-			}
-			
 			switch (ctarget) {
 				case CompileTarget.Exe:
 					sb.AppendLine ("--target:exe");  
@@ -396,6 +387,7 @@ namespace MonoDevelop.FSharp
 			outwr.Close();
 			errwr.Close();
 			pw.Dispose ();
+LoggingService.LogInfo("DoCompilation: errorCode {0}", exitCode);   // WNH TEMP
 			return exitCode;
 		}
 

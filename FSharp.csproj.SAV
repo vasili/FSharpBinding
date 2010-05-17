@@ -38,51 +38,37 @@
     </Reference>
     <Reference Include="Mono.Posix" />
     <Reference Include="MonoDevelop.Projects.Formats.MSBuild, Version=1.0.3576.14156, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Projects.Formats.MSBuild.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Projects.Formats.MSBuild.dll</HintPath>
     </Reference>
     <Reference Include="gtk-dotnet, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
-    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <HintPath>\usr\lib\cli\gtk-sharp-2.0\gtk-sharp.dll</HintPath>
-    </Reference>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="gtksourceview2-sharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <Package>gtksourceview2-sharp</Package>
     </Reference>
     <Reference Include="MonoDevelop.Core, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Core.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Core.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Projects, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Projects.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Projects.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Components, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Components.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Components.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Core.Gui, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Core.Gui.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Core.Gui.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Ide, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Ide.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Ide.dll</HintPath>
     </Reference>
     <Reference Include="MonoDevelop.Projects.Gui, Version=2.2.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\MonoDevelop.Projects.Gui.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\MonoDevelop.Projects.Gui.dll</HintPath>
     </Reference>
     <Reference Include="NRefactory, Version=2.1.1.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\home\vasili\Downloads\monodevelop-2.2.2\build\bin\NRefactory.dll</HintPath>
+      <HintPath>\home\vasili\Downloads\monodevelop-2.2.1\build\bin\NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="System.Security" />
-    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <HintPath>\usr\lib\cli\gdk-sharp-2.0\gdk-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\usr\lib\cli\glib-sharp-2.0\glib-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>\usr\lib\cli\pango-sharp-2.0\pango-sharp.dll</HintPath>
-    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="System.Drawing" />
-    <Reference Include="Mono.TextEditor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Downloads\monodevelop-2.2.2\build\bin\Mono.TextEditor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MonoDevelop.FSharp\FSharpLanguageBinding.cs" />
@@ -100,6 +86,7 @@
     <Compile Include="MonoDevelop.FSharp.Formatting\FSharpIndentEngineStack.cs" />
     <Compile Include="MonoDevelop.FSharp.Formatting\FSharpFormattingPolicy.cs" />
     <Compile Include="MonoDevelop.FSharp.Formatting\FSharpFormattingProperties.cs" />
+    <Compile Include="MonoDevelop.FSharp.Formatting\FSharpTextEditorIndentation.cs" />
     <Compile Include="MonoDevelop.FSharp.Parser\FSharpParser.cs" />
     <Compile Include="MonoDevelop.FSharp.Parser\NRefactoryParser.cs" />
     <Compile Include="MonoDevelop.FSharp.Resolver\NewFSharpExpressionFinder.cs" />

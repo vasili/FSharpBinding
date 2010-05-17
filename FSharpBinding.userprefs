@@ -3,21 +3,22 @@
   <MonoDevelop.Ide.DebuggingService>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService>
-  <MonoDevelop.Ide.Workbench ActiveDocument="MonoDevelop.FSharp/FSharpBindingCompilerManager.cs" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MonoDevelop.FSharp.Completion/NRefactoryParameterDataProvider.cs" ctype="Workbench">
     <Files>
+      <File FileName="../fractal/fractal/Main.fs" Line="1" Column="1" />
+      <File FileName="../FFT/FFT/Main.fs" Line="1" Column="1" />
       <File FileName="MonoDevelop.FSharp.Project/FSharpCompilerParameters.cs" Line="1" Column="1" />
-      <File FileName="MonoDevelop.FSharp/FSharpBindingCompilerManager.cs" Line="322" Column="1" />
+      <File FileName="MonoDevelop.FSharp/FSharpBindingCompilerManager.cs" Line="1" Column="1" />
       <File FileName="MonoDevelop.FSharp/FSharpLanguageBinding.cs" Line="1" Column="1" />
       <File FileName="MonoDevelop.FSharp/FSharpEnhancedCodeProvider.cs" Line="1" Column="1" />
       <File FileName="MonoDevelop.FSharp.Project/FSharpProjectParameters.cs" Line="1" Column="1" />
+      <File FileName="MonoDevelop.FSharp.Formatting/FSharpFormatter.cs" Line="1" Column="1" />
+      <File FileName="MonoDevelop.FSharp.Project/CompilerOptionsPanelWidget.cs" Line="1" Column="1" />
+      <File FileName="MonoDevelop.FSharp.Completion/NRefactoryParameterDataProvider.cs" Line="222" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="FSharpBinding" expanded="True" selected="True">
-            <Node name="MonoDevelop.FSharp" expanded="True" />
-          </Node>
-        </State>
+        <State />
       </Pad>
       <Pad Id="ClassPad">
         <State expanded="True" selected="True">
